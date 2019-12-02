@@ -27,4 +27,12 @@ repositories {
 
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web:$springBootVersion")
+    testCompile("org.springframework.boot:spring-boot-starter-test:$springBootVersion")
 }
+bootRun.environment([
+        "WELCOME_MESSAGE": "hello fom gradle",
+])
+
+test.environment([
+        "WELCOME_MESSAGE": "Hello from test",
+])
